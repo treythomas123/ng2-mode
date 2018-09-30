@@ -64,6 +64,15 @@
   (interactive)
   (find-file (ng2--counterpart-name (buffer-file-name))))
 
+(defun ng2-open-spec ()
+  "Opens the spec corresponding to this file (or vice versa)"
+  (interactive)
+  (find-file
+   (cond
+    ((string-match "\\`\\(.*\\)\\.spec\\.ts\\'" buffer-file-name) (concat (match-string 1 buffer-file-name) ".ts"))
+    (t (concat (file-name-sans-extension buffer-file-name) ".spec.ts"))
+    )))
+
 ;;;###autoload
 (defun ng2-mode ()
   "Activates the appropriate Angular 2-related mode for the buffer."
