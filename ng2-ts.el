@@ -105,17 +105,7 @@
   (font-lock-add-keywords nil ng2-ts-font-lock-keywords))
 
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.component.ts\\'" . ng2-ts-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.service.ts\\'" . ng2-ts-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.pipe.ts\\'" . ng2-ts-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.directive.ts\\'" . ng2-ts-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.guard.ts\\'" . ng2-ts-mode))
-;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.module.ts\\'" . ng2-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(component\\|service\\|pipe\\|directive\\|guard\\|module\\)\\(\\.spec\\)?\\.ts" . ng2-ts-mode))
 
 (provide 'ng2-ts)
 ;;; ng2-ts.el ends here
